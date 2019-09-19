@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane fx:id="scrollScene" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1599.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealAdderController">
+   <content>
+      <GridPane prefHeight="898.0" prefWidth="1599.0" style="-fx-background-color: #8FC1E3;">
+      	<columnConstraints>
+      		<ColumnConstraints hgrow="SOMETIMES" maxWidth="530.0" minWidth="-Infinity" prefWidth="530.0" />
+      		<ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="-Infinity" prefWidth="539.0" />
+      		<ColumnConstraints hgrow="SOMETIMES" maxWidth="530.0" minWidth="-Infinity" prefWidth="530.0" />
+      	</columnConstraints>
+      	<rowConstraints>
+      		<RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="86.0" vgrow="SOMETIMES" />
+      		<RowConstraints maxHeight="303.0" minHeight="-Infinity" prefHeight="53.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="303.0" minHeight="-Infinity" prefHeight="53.0" vgrow="SOMETIMES" />
+      		<RowConstraints maxHeight="303.0" minHeight="-Infinity" prefHeight="88.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="321.0" minHeight="-Infinity" prefHeight="88.0" vgrow="SOMETIMES" />
+      		<RowConstraints maxHeight="410.0" minHeight="-Infinity" prefHeight="88.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="601.0" minHeight="-Infinity" prefHeight="88.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="601.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+      	</rowConstraints>
+      	<children>
+            <GridPane prefHeight="96.0" prefWidth="1396.0" style="-fx-background-color: #5085a5;" GridPane.columnSpan="2147483647">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="533.0" minWidth="10.0" prefWidth="161.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="459.0" minWidth="10.0" prefWidth="157.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="151.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="418.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="84.0" prefHeight="84.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="92.0" fitWidth="85.0" onMouseClicked="#profile" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@/images/profile.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="83.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@/images/plus.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" onMouseClicked="#history" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@/images/calender.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblUsername" onMouseClicked="#homepage" text="Anup Sheena" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="30.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label text="Add a Meal" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label text="Date(DD-MM)" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Name" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Amount" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Unit" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Calories" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtMealName" prefHeight="51.0" prefWidth="1121.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="338.0" style="-fx-background-color: #5085a5;" text="Submit" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtMealDate" prefHeight="51.0" prefWidth="1121.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtMealAmount" prefHeight="51.0" prefWidth="1121.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtMealCalories" prefHeight="51.0" prefWidth="1121.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <RadioButton mnemonicParsing="false" selected="true" text="g" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleMealUnit" />
+               </toggleGroup>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="mL" textFill="WHITE" toggleGroup="$toggleMealUnit" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <Label fx:id="lblError" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.rowSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSuccess" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.rowSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+      	</children>
+      </GridPane>
+   </content>
+</ScrollPane>

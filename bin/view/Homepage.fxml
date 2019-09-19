@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane fx:id="scrollScene" prefHeight="900.0" prefWidth="1599.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomepageController">
+   <content>
+      <GridPane fx:id="gPaneHomepage" prefHeight="900.0" prefWidth="1599.0" style="-fx-background-color: #8FC1E3;">
+      	<columnConstraints>
+      		<ColumnConstraints hgrow="SOMETIMES" maxWidth="530.0" minWidth="-Infinity" prefWidth="530.0" />
+      		<ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="-Infinity" prefWidth="539.0" />
+      		<ColumnConstraints hgrow="SOMETIMES" maxWidth="530.0" minWidth="-Infinity" prefWidth="530.0" />
+      	</columnConstraints>
+      	<rowConstraints>
+      		<RowConstraints maxHeight="159.0" minHeight="-Infinity" prefHeight="86.0" vgrow="SOMETIMES" />
+      		<RowConstraints maxHeight="303.0" minHeight="-Infinity" prefHeight="186.0" vgrow="SOMETIMES" />
+      		<RowConstraints maxHeight="321.0" minHeight="-Infinity" prefHeight="41.0" vgrow="SOMETIMES" />
+      		<RowConstraints maxHeight="601.0" minHeight="-Infinity" prefHeight="512.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="410.0" minHeight="-Infinity" prefHeight="27.0" vgrow="SOMETIMES" />
+      	</rowConstraints>
+      	<children>
+      		<Label fx:id="lblConsumedCals" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      			<GridPane.margin>
+      				<Insets left="33.0" top="30.0" />
+      			</GridPane.margin>
+      			<font>
+      				<Font size="21.0" />
+      			</font>
+      		</Label>
+      		<Label fx:id="lblRemainingCals" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      			<GridPane.margin>
+      				<Insets right="25.0" top="30.0" />
+      			</GridPane.margin>
+      			<font>
+      				<Font size="21.0" />
+      			</font>
+      		</Label>
+      		<Label text="Consumed" textFill="#61ae0f" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      			<font>
+      				<Font size="20.0" />
+      			</font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+      		</Label>
+      		<Label text="Remaining" textFill="#f2400a" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      			<font>
+      				<Font size="21.0" />
+      			</font>
+      		</Label>
+      		<Label prefHeight="11.0" prefWidth="175.0" text="Today's Foods" textFill="#fcfcfc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      			<font>
+      				<Font name="System Bold" size="26.0" />
+      			</font>
+      		</Label>
+            <ScrollPane fx:id="scrollHomepage" fitToHeight="true" fitToWidth="true" prefHeight="501.0" prefWidth="532.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <GridPane prefHeight="96.0" prefWidth="1396.0" style="-fx-background-color: #5085a5;" GridPane.columnSpan="2147483647">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="533.0" minWidth="10.0" prefWidth="161.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="459.0" minWidth="10.0" prefWidth="157.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="151.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="418.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="84.0" prefHeight="84.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="92.0" fitWidth="85.0" onMouseClicked="#profile" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@/images/profile.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="83.0" fitWidth="72.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@/images/plus.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" onMouseClicked="#history" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@/images/calender.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblUsername" text="Anup Sheena" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="30.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+      	</children>
+      </GridPane>
+   </content>
+</ScrollPane>
